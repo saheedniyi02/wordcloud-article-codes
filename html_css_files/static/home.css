@@ -64,6 +64,7 @@
   .nav-btn a {
     display: inline-block;
     text-decoration: none;
+    /* background-color: #0C9BF9; */
     background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
     color: white;
     font-weight: bold;
@@ -105,23 +106,106 @@
     border: 2px solid #0C9BF9;
   }
   
-  .header-img abbr {
-    display: block;
-    /* border: 1px solid red; */
-    width: fit-content;
-    margin: auto;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+  .about {
+    padding: 2rem 10vw;
   }
   
-  .header-img a {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wrapper i {
+    margin: auto;
+    font-size: 10rem;
+    color: #0C9BF9;
+    /* display: block; */
+    /* width: 40%; */
+  }
+  
+  .wrapper p {
+    width: 60%;
+    font-family: 'Product Sans', cursive;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 0 2rem;
+    color: #c4c4c4;
+  }
+  
+  .wrapper span,
+  .brief span,
+  .reply span {
+    display: inline-block;
+    background-image: linear-gradient(45deg, #0C9BF9, #AA22EE);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .how-to-use {
+    padding: 7rem 10vw;
+  }
+  
+  .how-to-use > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .how-to-use p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #c4c4c4;
+  }
+  
+  /* .how-to-use p:nth-child(3) {
+    font-family: 'Product Sans Bold', cursive;
+  } */
+  
+  .command {
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background-color: #46464642;
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+  
+  .command code {
+    font-family: monospace;
+    font-weight: bold;
+  }
+  
+  .command span {
+    color: #addeff;
+    color: #e1a6ff;
+  }
+  
+  .command a {
     text-decoration: none;
-    color: #ffffff;
+    /* cursor: pointer; */
+    color: #999999;
     transition: color .3s ease-out;
   }
   
-  .header-img a:hover {
+  .command a:hover {
     color: #0C9BF9;
+  }
+  
+  .option {
+    margin-bottom: 1rem;
+  }
+  
+  p.option {
+    color: #8b8b8b;
+    font-size: 1.3rem;
+  }
+  
+  .option span {
+    font-weight: bold;
   }
   
   footer {
@@ -207,6 +291,51 @@
     .header-img img {
       max-width: 100%;
       border-radius: .8rem;
+    }
+  
+    .about {
+      padding: 2rem 5vw;
+    }
+  
+    .wrapper {
+      flex-direction: column;
+    }
+  
+    .wrapper i {
+      order: 2;
+    }
+  
+    .wrapper p {
+      order: 1;
+      width: 100%;
+      font-size: 1.3rem;
+      line-height: 1.2;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .how-to-use {
+      padding: 5rem 5vw;
+    }
+  
+    .how-to-use > h1 {
+      font-size: 2rem;
+    }
+  
+    .how-to-use p {
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+  
+    .command {
+      font-size: 1.1rem;
+      padding: .7rem 1rem;
+      margin: 1rem 0;
+    }
+  
+    .command a {
+      display: inline-block;
+      margin-left: 1rem;
     }
   
     footer {
