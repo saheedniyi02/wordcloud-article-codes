@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- font awesome API -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{url_for("static", filename="home.css")}}">
-    <link rel="icon" href="{{url_for("static", filename="tab-icon.png"}}">
-    <title>Word Cloud for Twitter Users</title>
+    <link rel="stylesheet" href="{{url_for(" static", filename="display_image.css" )}}">
+
+    <link rel="icon" href="{{url_for(" static", filename="tab-icon.png" )}}">
+    <title>My Word Cloud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -24,7 +22,7 @@
             </div>
         </div>
         <div class="logo">
-            <a href="">
+            <a href="/">
                 <h1>Word Cloud for Twitter Users</h1>
             </a>
         </div>
@@ -36,41 +34,18 @@
 
     <header>
         <h1>
-            Sample
             <br />
-            <span>Word Cloud Image</span>✨
+            <span>Your word cloud image is below</span>✨
         </h1>
         <div class="header-img">
-            <img src="{{url_for("static", filename="sample-wordcloud.png")}}" alt="a word-cloud for lagos" />
+            <img src="{{image_path}}" alt="Your wordcloud" />
+            <abbr title="download">
+                <a href="/download/{{tweet_id}}">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </abbr>
         </div>
     </header>
-
-    <section class="about">
-        <div class="wrapper">
-            <i class="fa-brands fa-twitter"></i>
-            <p><span>@twitterbot</span> is a twitter bot which generates word cloud image of top words that have
-                been commonly used by a twitter user</p>
-        </div>
-    </section>
-
-    <section class="how-to-use">
-        <h1>How to Use.</h1>
-        <p class="brief">It's as simple as mentioning <span>@twitterbot</span> in a tweet,then adding the
-            #createmywordcloud in the tweet. <span>@twitterbot</span> would reply your tweet in less than 10 minutes
-            with a link for
-            you to
-            view and download your Word Cloud image.</p>
-        <!-- <p>🎯 Like this</p> -->
-        <div class="command">
-            <code><span>@twitterbot #createmywordcloud</span></code>
-            <div>
-                <a href="https://twitter.com/intent/tweet?text=@twitterbot&hashtags=createmywordcloud" target="_blank">
-                    tweet <i class="fa-brands fa-twitter"></i>
-                </a>
-            </div>
-        </div>
-
-    </section>
 
     <footer>
         <a href="https://twitter.com/twitterbot" target="_blank">
